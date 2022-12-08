@@ -8,7 +8,7 @@ const App = () => {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Welcome team dddd
+          Welcome team - thisis a feature of jade
         </p>
         <a
           className="App-link"
