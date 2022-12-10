@@ -12,7 +12,7 @@ const App = () => {
         </p>
 <textarea>
 Anand,Jaison,Ilayaraja,Jagadesh,Dhayalan,Arunachalam,Aravindhan,Kiruthi,Jawahar,Bincy 
-<textarea>
+</textarea>
         <a
           className="App-link"
           href="https://reactjs.org"
