@@ -10,9 +10,18 @@ const App = () => {
         <p>
           Welcome team
         </p>
-<textarea>
-Anand,Jaison,Ilayaraja,Jagadesh,Dhayalan,Arunachalam,Aravindhan,Kiruthi,Jawahar,Bincy 
-</textarea>
+        <ul>
+          <li>Anand</li>
+          <li>Dhayalan</li>
+          <li>Jaison</li>
+          <li>Ilayaraja</li>
+          <li>Aravindhan</li>
+          <li>Kiruthi</li>
+          <li>Arunachalam</li>
+          <li>Jawahar</li>
+          <li>Bincy</li>
+          <li>Jagadesh</li>
+        </ul>
         <a
           className="App-link"
           href="https://reactjs.org"
