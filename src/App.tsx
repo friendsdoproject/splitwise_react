@@ -8,7 +8,7 @@ const App = () => {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Welcome Team
+          Welcome Team !!
         </p>
         <ul>
           <li>Anand</li>
