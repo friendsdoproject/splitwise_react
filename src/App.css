@@ -1,38 +1,283 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html,body{
+  height: 100%;
+}
+
+body{
+  display: grid;
+  place-items: center;
   text-align: center;
+  background: #dde1e7;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#light {
+  background: #dde1e7;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#dark {
+  background: #181818;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#dark body{
+  background: #181818;
+}
+
+#light body{
+  background: #ffffff;
+}
+
+.content{
+  width: 330px;
+  background: #dde1e7;
+  border-radius: 10px;
+  padding: 40px 30px;
+  box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
+}
+
+#dark.content{
+  background: #181818;
+  box-shadow: inset -3px -3px 7px #2c282873, inset 2px 2px 5px rgba(0 0 0 / 29%);
+}
+
+#light.content{
+  background: #dde1e7;
+  box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
+}
+
+.content img{
+  width: 90px;
+  height: 90px;
+  margin-top: -100px;
+  border-radius: 50px;
+  box-shadow: 
+
+  0px 0px 2px #5f5f5f,
+  0px 0px 0px 5px #ecf0f3,
+  8px 8px 15px #a7aaaf,
+  -8px -8px 15px #ffffff
+  ;
+}
+
+.content .text{
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 35px;
+  color: #000;
+}
+
+#dark .text{
+  color:rgb(255, 255, 255);
+}
+
+#light .text{
+  color: #000000;
+}
+
+.content .field{
+  height: 50px;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+
+.field input{
+  height: 100%;
+  width: 100%;
+  padding-left: 45px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  color: #595959;
+  background: #dde1e7;
+  border-radius: 25px;
+  box-shadow: inset 2px 2px 5px #babecc,
+              inset -5px -5px 10px #ffffff73;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#dark .field input{
+  color:rgb(226, 226, 226);
+  background: #181818;
+  box-shadow: inset 2px 2px 5px #07080b, inset -5px -5px 10px #2f2d2d73;
 }
+
+#light .field input{
+  color: #000000;
+  background: #dde1e7;
+  box-shadow: inset 2px 2px 5px #babecc,
+              inset -5px -5px 10px #ffffff73;
+}
+
+.field:nth-child(2){
+  margin-top: 20px;
+}
+
+.field span{
+  position: absolute;
+  width: 50px;
+  line-height: 50px;
+  color: #595959;
+}
+
+#dark .field span{
+  color: #d6d6d6;
+}
+
+#light .field span{
+  color: #595959;
+}
+
+button{
+  margin: 25px 0 0 0;
+  width: 100%;
+  height: 50px;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  background: #dde1e7;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 25px;
+  box-shadow: 2px 2px 5px #babecc,
+              -5px -5px 10px #ffffff73;
+}
+
+#light button {
+  background: #dde1e7;
+  color: #000;
+  box-shadow: 2px 2px 5px #babecc,
+              -5px -5px 10px #ffffff73;
+}
+
+#dark button {
+  background: #181818;
+  color: rgb(255, 255, 255);
+  box-shadow: inset 2px 2px 5px #383a3e,
+              inset -5px -5px 10px #00000073;
+}
+
+
+#light .button:focus{
+  color: #3498db;
+  box-shadow: inset 2px 2px 5px #babecc,
+              inset -5px -5px 10px #ffffff73;
+}
+
+#dark .button:focus{
+  color: #7f8b92;
+  box-shadow: inset 2px 2px 5px #383a3e,
+              inset -5px -5px 10px #00000073;
+}
+
+
+.switch {
+  margin-top: 32px;
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+  cursor: pointer;
+}
+.switch input {
+  display: none;
+}
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #ecf0f3;
+  border-radius: 20px;
+  box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
+              -2px -2px 12px rgba(255, 255, 255, 0.5),
+              inset -2px -2px 8px rgba(255, 255, 255, 1),
+              inset -2px -2px 12px rgba(255, 255, 255, 0.5),
+              inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+              inset 2px 2px 8px rgba(0, 0, 0, .3),
+              2px 2px 8px rgba(0, 0, 0, .3);
+  background-color: #ecf0f3;
+}
+
+#light .slider {
+  border: 2px solid #ecf0f3;
+  box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
+              -2px -2px 12px rgba(255, 255, 255, 0.5),
+              inset -2px -2px 8px rgba(255, 255, 255, 1),
+              inset -2px -2px 12px rgba(255, 255, 255, 0.5),
+              inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+              inset 2px 2px 8px rgba(0, 0, 0, .3),
+              2px 2px 8px rgba(0, 0, 0, .3);
+  background-color: #ecf0f3;
+}
+
+#dark .slider {
+  border: 2px solid #171717;
+  box-shadow: -2px -2px 8px rgb(0, 0, 0),
+              -2px -2px 12px rgba(0, 0, 0, 0.5),
+              inset -2px -2px 8px rgb(0, 0, 0),
+              inset -2px -2px 12px rgba(0, 0, 0, 0.5),
+              inset 2px 2px 4px rgba(0, 0, 0, 0.1),
+              inset 2px 2px 8px rgba(0, 0, 0, .3),
+              2px 2px 8px rgba(0, 0, 0, .3);
+  background-color: #161617;
+}
+.slider:before {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  z-index: 999;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
+              -2px -2px 12px rgba(255, 255, 255, 0.5),
+              inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+              2px 2px 8px rgba(0, 0, 0, .3);
+  background-color: #ecf0f3;
+  content: "";
+  transition: .5s;
+}
+
+#light .slider:before {
+  box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
+              -2px -2px 12px rgba(255, 255, 255, 0.5),
+              inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+              2px 2px 8px rgba(0, 0, 0, .3);
+  background-color: #ecf0f3;
+}
+
+#dark .slider:before {
+  box-shadow: -2px -2px 8px rgb(0, 0, 0),
+              -2px -2px 12px rgba(0, 0, 0, 0.5),
+              inset 2px 2px 4px rgba(0, 0, 0, 0.1),
+              2px 2px 8px rgba(255, 255, 255, 0.3);
+  background-color: #161515;
+}
+
+.off {
+  position: absolute;
+  top: 14px;
+  right: 12px;
+  color: #3d3935;
+  font-size: .8125rem;
+}
+.on {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  color: #f252a5;
+  font-size: .8125rem;
+}
+input:checked + .slider:before {
+  transform: translateX(33px);
+}
+ 
