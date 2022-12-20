@@ -81,6 +81,7 @@ body{
 }
 
 .content .field{
+  margin-top: 20px;
   height: 50px;
   width: 100%;
   display: flex;
@@ -115,9 +116,6 @@ body{
               inset -5px -5px 10px #ffffff73;
 }
 
-.field:nth-child(2){
-  margin-top: 20px;
-}
 
 .field span{
   position: absolute;
