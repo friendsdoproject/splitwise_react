@@ -13,26 +13,32 @@ const App = () => {
     : (document.body.style.backgroundColor = "#dde1e7");
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className="content" id={theme}>
-        <div className="text" id={theme}>
+      <div className="content" data-name={theme}>
+        <div className="text" data-name={theme}>
           Sign in
         </div>
-        <form>
-          <div className="field" id={theme}>
-            <span className="fa fa-user"></span>
-            <input type="text" placeholder="Email Id" id={theme} />
-          </div>
-          <div className="field" id={theme}>
-            <span className="fa fa-lock"></span>
-            <input type="password" id={theme} placeholder="Password" />
-          </div>
-          <button id={theme}>Log in</button>
-        </form>
-        <label className="switch" id={theme}>
+        <div className="field" data-name={theme}>
+          <span className="fa fa-user"></span>
+          <input type="text" placeholder="Email Id" data-name={theme} />
+        </div>
+        <div className="field" data-name={theme}>
+          <span className="fa fa-lock"></span>
+          <input type="password" data-name={theme} placeholder="Password" />
+        </div>
+        <button data-name={theme} onClick={() => {}}>
+          Log in
+        </button>
+      </div>
+      <div>
+        <label className="switch" data-name={theme}>
           <input type="checkbox" onClick={toggleTheme} />
           <span className="slider"></span>
-          <span className="on">ON</span>
-          <span className="off">OFF</span>
+          <span className="on">
+            <i className="fa fa-moon-o" aria-hidden="true"></i>
+          </span>
+          <span className="off">
+            <i className="fa fa-sun-o" aria-hidden="true"></i>
+          </span>
         </label>
       </div>
     </ThemeContext.Provider>

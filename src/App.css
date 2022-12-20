@@ -17,19 +17,19 @@ body{
   background: #dde1e7;
 }
 
-#light {
+[data-name='light'] {
   background: #dde1e7;
 }
 
-#dark {
+[data-name='dark'] {
   background: #181818;
 }
 
-#dark body{
+[data-name='dark'] body{
   background: #181818;
 }
 
-#light body{
+[data-name='light'] body{
   background: #ffffff;
 }
 
@@ -41,12 +41,12 @@ body{
   box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
 }
 
-#dark.content{
+[data-name='dark'].content{
   background: #181818;
   box-shadow: inset -3px -3px 7px #2c282873, inset 2px 2px 5px rgba(0 0 0 / 29%);
 }
 
-#light.content{
+[data-name='light'].content{
   background: #dde1e7;
   box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
 }
@@ -72,11 +72,11 @@ body{
   color: #000;
 }
 
-#dark .text{
-  color:rgb(255, 255, 255);
+[data-name='dark'] .text{
+  color:rgb(242 82 147);
 }
 
-#light .text{
+[data-name='light'] .text{
   color: #000000;
 }
 
@@ -102,13 +102,13 @@ body{
               inset -5px -5px 10px #ffffff73;
 }
 
-#dark .field input{
+[data-name='dark'] .field input{
   color:rgb(226, 226, 226);
   background: #181818;
   box-shadow: inset 2px 2px 5px #07080b, inset -5px -5px 10px #2f2d2d73;
 }
 
-#light .field input{
+[data-name='light'] .field input{
   color: #000000;
   background: #dde1e7;
   box-shadow: inset 2px 2px 5px #babecc,
@@ -126,17 +126,17 @@ body{
   color: #595959;
 }
 
-#dark .field span{
+[data-name='dark'] .field span{
   color: #d6d6d6;
 }
 
-#light .field span{
+[data-name='light'] .field span{
   color: #595959;
 }
 
 button{
   margin: 25px 0 0 0;
-  width: 100%;
+  width: 50%;
   height: 50px;
   color: #000;
   font-size: 18px;
@@ -150,31 +150,30 @@ button{
               -5px -5px 10px #ffffff73;
 }
 
-#light button {
+[data-name='light'] button {
   background: #dde1e7;
   color: #000;
   box-shadow: 2px 2px 5px #babecc,
               -5px -5px 10px #ffffff73;
 }
 
-#dark button {
+[data-name='dark'] button {
   background: #181818;
-  color: rgb(255, 255, 255);
+  color: rgb(242 82 147);
   box-shadow: inset 2px 2px 5px #383a3e,
               inset -5px -5px 10px #00000073;
 }
 
 
-#light .button:focus{
+[data-name='light'] button:focus{
   color: #3498db;
   box-shadow: inset 2px 2px 5px #babecc,
               inset -5px -5px 10px #ffffff73;
 }
 
-#dark .button:focus{
+[data-name='dark'] button:focus{
   color: #7f8b92;
-  box-shadow: inset 2px 2px 5px #383a3e,
-              inset -5px -5px 10px #00000073;
+  box-shadow: inset 2px 2px 5px #080809, inset -5px -5px 10px #372e2e73;
 }
 
 
@@ -190,6 +189,7 @@ button{
   display: none;
 }
 .slider {
+  margin-top: 4px;
   position: absolute;
   top: 0;
   left: 0;
@@ -207,7 +207,7 @@ button{
   background-color: #ecf0f3;
 }
 
-#light .slider {
+[data-name='light'] .slider {
   border: 2px solid #ecf0f3;
   box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
               -2px -2px 12px rgba(255, 255, 255, 0.5),
@@ -219,7 +219,7 @@ button{
   background-color: #ecf0f3;
 }
 
-#dark .slider {
+[data-name='dark'] .slider {
   border: 2px solid #171717;
   box-shadow: -2px -2px 8px rgb(0, 0, 0),
               -2px -2px 12px rgba(0, 0, 0, 0.5),
@@ -247,7 +247,7 @@ button{
   transition: .5s;
 }
 
-#light .slider:before {
+[data-name='light'] .slider:before {
   box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
               -2px -2px 12px rgba(255, 255, 255, 0.5),
               inset 2px 2px 4px rgba(255, 255, 255, 0.1),
@@ -255,7 +255,7 @@ button{
   background-color: #ecf0f3;
 }
 
-#dark .slider:before {
+[data-name='dark'] .slider:before {
   box-shadow: -2px -2px 8px rgb(0, 0, 0),
               -2px -2px 12px rgba(0, 0, 0, 0.5),
               inset 2px 2px 4px rgba(0, 0, 0, 0.1),
